@@ -5,7 +5,7 @@ PID_FILE="/tmp/snapd-install.pid"
 cd advanced_level
 
 echo installing snapd...
-apt update && apt install -y snapd &
+(apt update && apt install -y snapd) &
 echo $! > $PID_FILE
 
 PID=$(cat "$PID_FILE")
