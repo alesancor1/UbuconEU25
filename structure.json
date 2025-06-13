@@ -1,0 +1,15 @@
+{
+    "title": "Ubucon EU 2025",
+    "description": "Workshop for Ubucon EU 2025",
+    "items": [
+        {
+            "path": "basic_level"
+        },
+        {
+            "path": "advanced_level"
+        },
+        {
+            "path": "challenge"
+        }
+    ]
+}

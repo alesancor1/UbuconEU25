@@ -1,0 +1,36 @@
+{
+    "title": "Basic Level",
+    "details": {
+        "intro": {
+            "text": "intro.md",
+            "foreground": "setup.sh"
+        },
+        "steps": [
+            {
+                "title": "Add sources to a rock",
+                "text": "add_sources/text.md",
+                "verify": "add_sources/verify.sh"
+            }
+        ],
+        "finish": {
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [
+                {
+                    "file": "index.html",
+                    "target": "/root/advanced_level",
+                    "chmod": "+w"
+                },
+                {
+                    "file": "nginx.conf",
+                    "target": "/root/advanced_level",
+                    "chmod": "+w"
+                }
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "ubuntu"
+    }
+}
