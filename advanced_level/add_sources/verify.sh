@@ -2,11 +2,16 @@
 
 set -ex
 
-# Build the rock
-/snap/bin/rockcraft pack
+# cd to the correct path
+cd /root/advanced_level
 
-# Find the generated rock file (assumes *_latest_amd64.rock)
+# Check that rock has been packed
 ROCK_FILE=$(ls *.rock 2>/dev/null | head -n1)
+
+if [ -z "$ROCK_FILE" ]; then
+    echo "No .rock file found in /root/advanced_level"
+    exit 1
+fi
 
 # Extract rock name (before _latest_amd64)
 ROCK_NAME=$(basename "$ROCK_FILE" | sed 's/_latest_amd64\.rock$//')

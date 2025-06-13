@@ -42,3 +42,5 @@ Run your image with docker and check that the `index.html` file is there:
 ```bash
 docker run --rm "<your-rock-name>:latest" exec cat /index.html"
 ```
+
+Once your rock is packed and working, check the result and jump to the next step!
