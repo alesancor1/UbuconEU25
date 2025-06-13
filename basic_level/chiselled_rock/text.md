@@ -1,5 +1,3 @@
-# Chisel the Rock
-
 In this step, you’ll modify your `rock.yaml` to use a **chisel slice** instead of directly including the full `hello` package. This makes your rock smaller and more efficient by including only the exact files you need.
 
 ## 🧱 What Is a Chisel Slice?

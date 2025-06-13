@@ -9,7 +9,7 @@ Welcome to this hands-on lab! In this scenario, you’ll create and optimize a m
 You’ll go through **three exercises**, each building on the last, to transform a simple rock into an optimized, production-grade container:
 
 ### 1. ✅ **Create a Simple Hello Rock**
-You’ll start with a partially completed `rock.yaml` and fill in the required fields to create a basic working rock that runs the `hello` command.
+You’ll start with a partially completed `rockcraft.yaml` and fill in the required fields to create a basic working rock that runs the `hello` command.
 
 ### 2. 🛠️ **Make the Rock Baseless**
 Next, you’ll optimize the rock by removing the base layer, making the container smaller and leaner using the `bare` base strategy.
@@ -24,8 +24,6 @@ Finally, you’ll replace full packages with **chisel slices**—a method of inc
 - Basic knowledge of YAML syntax
 - Familiarity with Linux commands
 - Curiosity to build lean and fast containers
-
-Each step includes instructions, hints, and a `verify.sh` script to check your work.
 
 ---
 

@@ -27,5 +27,14 @@
     },
     "backend": {
         "imageid": "ubuntu"
+    },
+    "assets": {
+        "host01": [
+            {
+                "file": "rockcraft.yaml",
+                "target": "/root",
+                "chmod": "+w"
+            }
+        ]
     }
 }

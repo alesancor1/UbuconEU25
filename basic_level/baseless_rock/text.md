@@ -1,5 +1,3 @@
-# Make the Rock Baseless
-
 In this step, you'll modify your `rock.yaml` to make the rock **baseless**. This allows you to create leaner container images with fewer dependencies by using only what you explicitly include.
 
 ## 📝 Instructions

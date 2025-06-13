@@ -1,5 +1,3 @@
-# Create a Simple Hello Rock
-
 In this step, you're provided with a partially completed `rockcraft.yaml` file. Your task is to **fill in the missing `base` and `parts` fields** so that this rock becomes a valid "Hello World" rock.
 
 ## 📝 Instructions
