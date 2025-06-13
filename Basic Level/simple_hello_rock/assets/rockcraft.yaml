@@ -1,0 +1,13 @@
+name: hello-rock
+version: '0.1'
+summary: My Hello world rock
+description: |
+    The extended description for my awesome and shiny
+    hello world rock
+platforms:
+    amd64:
+
+base: # TODO fill this field
+
+parts:
+    hello: # TODO Fill this field

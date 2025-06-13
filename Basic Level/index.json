@@ -1,0 +1,31 @@
+{
+    "title": "Basic Level",
+    "details": {
+        "intro": {
+            "text": "intro.md"
+        },
+        "steps": [
+            {
+                "title": "Create a simple Hello Rock",
+                "text": "simple_hello_rock/text.md",
+                "verify": "simple_hello_rock/verify.sh"
+            },
+            {
+                "title": "Make the rock baseless",
+                "text": "baseless_rock/text.md",
+                "verify": "baseless_rock/verify.sh"
+            },
+            {
+                "title": "Chisel the rock",
+                "text": "chiselled_rock/text.md",
+                "verify": "chiselled_rock/verify.sh"
+            }
+        ],
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "backend": {
+        "imageid": "ubuntu"
+    }
+}

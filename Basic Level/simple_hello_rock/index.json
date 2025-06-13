@@ -1,0 +1,14 @@
+{
+    "description": "Create a Hello World Rock",
+    "details": {
+        "assets": {
+            "host01": [
+                {
+                    "file": "rockcraft.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
+        }
+    }
+}

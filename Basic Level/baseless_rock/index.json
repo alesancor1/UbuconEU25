@@ -1,0 +1,14 @@
+{
+    "description": "Make the rock baseless",
+    "details": {
+        "assets": {
+            "host01": [
+                {
+                    "file": "rockcraft.yaml",
+                    "target": "/root",
+                    "chmod": "+w"
+                }
+            ]
+        }
+    }
+}
