@@ -11,9 +11,9 @@ EXPECTED_STAGE_PACKAGE="hello"
 check_base() {
     base_value=$(yq e '.base' "$YAML_FILE")
     if [[ "$base_value" == "$EXPECTED_BASE" ]]; then
-        echo "✅ Base field is correctly set to '$EXPECTED_BASE'."
+        echo "Base field is correctly set to '$EXPECTED_BASE'."
     else
-        echo "❌ Base field is not correctly set. Found: '$base_value'"
+        echo "Base field is not correctly set. Found: '$base_value'"
         return 1
     fi
 }
@@ -26,17 +26,17 @@ check_parts() {
     local valid=true
 
     if [[ "$plugin" != "$EXPECTED_PLUGIN" ]]; then
-        echo "❌ Plugin is not correctly set. Found: '$plugin'"
+        echo "Plugin is not correctly set. Found: '$plugin'"
         valid=false
     else
-        echo "✅ Plugin is correctly set to '$EXPECTED_PLUGIN'."
+        echo "Plugin is correctly set to '$EXPECTED_PLUGIN'."
     fi
 
     if [[ "$package" != "$EXPECTED_STAGE_PACKAGE" ]]; then
-        echo "❌ Stage package is not correctly set. Found: '$package'"
+        echo "Stage package is not correctly set. Found: '$package'"
         valid=false
     else
-        echo "✅ Stage package is correctly set to '$EXPECTED_STAGE_PACKAGE'."
+        echo "Stage package is correctly set to '$EXPECTED_STAGE_PACKAGE'."
     fi
 
     $valid || return 1
@@ -50,7 +50,7 @@ fi
 
 # Run checks
 echo "Checking YAML file: $YAML_FILE"
-check_base && check_parts && echo "✅ All required fields are properly filled!" || {
-    echo "❌ Some fields are missing or incorrect."
+check_base && check_parts && echo "All required fields are properly filled!" || {
+    echo "Some fields are missing or incorrect."
     exit 1
 }

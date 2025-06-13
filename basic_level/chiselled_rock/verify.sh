@@ -4,21 +4,21 @@ YAML_FILE="rockcraft.yaml"
 
 # Check for yq
 if ! command -v yq &> /dev/null; then
-    echo "❌ 'yq' is not installed. Please install it: https://github.com/mikefarah/yq"
+    echo "'yq' is not installed. Please install it: https://github.com/mikefarah/yq"
     exit 1
 fi
 
-# Check for 'hello_bins'
-if ! yq e '.. | scalars' "$YAML_FILE" | grep -q '^hello_bins$'; then
-    echo "❌ 'hello_bins' not found in rockcraft.yaml."
+# Check if parts.hello.stage-packages contains 'hello_bins'
+if ! yq e '.parts.hello["stage-packages"][]' "$YAML_FILE" | grep -qx 'hello_bins'; then
+    echo "'hello_bins' not found in parts.hello.stage-packages."
     exit 1
 fi
 
-# Ensure 'hello' is not present (excluding hello_bins)
-if yq e '.. | scalars' "$YAML_FILE" | grep -q '^hello$'; then
-    echo "❌ 'hello' is still present in rockcraft.yaml. It should be removed."
+# Ensure 'hello' is not present in parts.hello.stage-packages
+if yq e '.parts.hello["stage-packages"][]' "$YAML_FILE" | grep -qx 'hello'; then
+    echo "'hello' is still present in parts.hello.stage-packages. It should be removed."
     exit 1
 fi
 
-echo "✅ 'hello' has been successfully replaced with 'hello_bins'."
+echo "Correct: 'hello_bins' is present and 'hello' is removed in stage-packages."
 exit 0
