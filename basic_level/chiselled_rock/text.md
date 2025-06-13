@@ -1,4 +1,4 @@
-In this step, you’ll modify your `rock.yaml` to use a **chisel slice** instead of directly including the full `hello` package. This makes your rock smaller and more efficient by including only the exact files you need.
+In this step, you’ll modify your `rockcraft.yaml` to use a **chisel slice** instead of directly including the full `hello` package. This makes your rock smaller and more efficient by including only the exact files you need.
 
 ## 🧱 What Is a Chisel Slice?
 
@@ -10,7 +10,7 @@ This helps reduce the size of your rock and keeps it more secure and focused.
 
 ## 📝 Instructions
 
-Your current `rock.yaml` includes this:
+Your current `rockcraft.yaml` includes this:
 
 ```yaml
 stage-packages:

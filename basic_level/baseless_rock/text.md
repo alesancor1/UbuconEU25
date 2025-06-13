@@ -1,8 +1,8 @@
-In this step, you'll modify your `rock.yaml` to make the rock **baseless**. This allows you to create leaner container images with fewer dependencies by using only what you explicitly include.
+In this step, you'll modify your `rockcraft.yaml` to make the rock **baseless**. This allows you to create leaner container images with fewer dependencies by using only what you explicitly include.
 
 ## 📝 Instructions
 
-Your current `rock.yaml` uses a full base image:
+Your current `rockcraft.yaml` uses a full base image:
 
 ```yaml
 base: ubuntu@24.04

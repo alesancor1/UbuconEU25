@@ -6,7 +6,7 @@ Congratulations! You've successfully built and optimized your very own **Hello R
 
 ## ✅ What You Accomplished
 
-- 🧱 **Created a working rock** using a basic `rock.yaml`
+- 🧱 **Created a working rock** using a basic `rockcraft.yaml`
 - ⚙️ **Made it baseless**, stripping away unnecessary runtime layers
 - ✂️ **Chiselled it down**, including only the essential files with a chisel slice
 
