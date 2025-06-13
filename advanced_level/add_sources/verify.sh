@@ -3,7 +3,7 @@
 set -ex
 
 # Build the rock
-rockcraft pack
+rockcraft pack > /var/log/verify.log 2>&1
 
 # Find the generated rock file (assumes *_latest_amd64.rock)
 ROCK_FILE=$(ls *.rock 2>/dev/null | head -n1)
