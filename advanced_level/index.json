@@ -16,6 +16,16 @@
                 "title": "Install Nginx to your rock",
                 "text": "install_nginx/text.md",
                 "verify": "install_nginx/verify.sh"
+            },
+            {
+                "title": "Make your rock rootless",
+                "text": "rootless_rock/text.md",
+                "verify": "rootless_rock/verify.sh"
+            },
+            {
+                "title": "Add a new part to your rock",
+                "text": "add_parts/text.md",
+                "verify": "add_parts/verify.sh"
             }
         ],
         "finish": {

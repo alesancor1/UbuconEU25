@@ -57,7 +57,7 @@ Rebuild and test your rock:
 ```bash
 rockcraft pack
 skopeo-copy <your-rock-name>
-docker run -d -p 8080:80 "<your-rock-name>:latest"
+docker run -d -p 8080:80 --name hello-nginx "<your-rock-name>:latest"
 ```
 
 You should be able to run curl and check the file being served by your rock. Then verify that the container is running, and optionally inspect it to confirm it’s running as the non-root user:
@@ -69,3 +69,9 @@ docker exec -it <container-id> whoami
 You should see `_daemon_`.
 
 > If your container is chiselled you will not be able to run `whoami`, instead, you can check the contents of your image using external tools like [dive](https://github.com/wagoodman/dive)
+
+Remember to stop your container:
+
+```bash
+docker stop hello-nginx
+```
