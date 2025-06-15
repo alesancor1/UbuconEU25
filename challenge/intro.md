@@ -30,37 +30,37 @@ To do this challenge properly on your system, make sure you have:
 
 1. **Snapd installed**  
 
-```bash
-sudo apt install -y snapd
-```
+    ```bash
+    sudo apt install -y snapd
+    ```
 
 2. **Rockcraft installed**  
 
-```bash
-sudo snap install rockcraft --classic
-```
+    ```bash
+    sudo snap install rockcraft --classic
+    ```
 
 3. **LXD initialized**  
 
-```bash
-sudo lxd init --auto
-```
+    ```bash
+    sudo lxd init --auto
+    ```
 
 4. **Docker installed** (optional, for testing)  
 
-```bash
-sudo snap install docker
-```
+    ```bash
+    sudo snap install docker
+    ```
 
 5. (Optional) Add this function to your `.bashrc` file:
 
-```bash
-skopeo-copy() {
-    short_name=$(echo "$1" | cut -d '_' -f1)
-    short_version=$(echo "$1" | cut -d '_' -f2)
-    sudo rockcraft.skopeo --insecure-policy copy oci-archive:"$1" docker-daemon:"$short_name":"$short_version"
-}
-```
+    ```bash
+    skopeo-copy() {
+        short_name=$(echo "$1" | cut -d '_' -f1)
+        short_version=$(echo "$1" | cut -d '_' -f2)
+        sudo rockcraft.skopeo --insecure-policy copy oci-archive:"$1" docker-daemon:"$short_name":"$short_version"
+    }
+    ```
 
 ---
 
