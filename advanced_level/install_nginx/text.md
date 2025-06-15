@@ -13,6 +13,10 @@ Here’s what you need to do:
 1. **Install NGINX** in your rock by adding the `nginx` package.
 2. **Include the `nginx.conf`** file (already provided, check with `ls`) in your rock and ensure it's placed under `/etc/nginx/conf.d/`.
 3. **Move your `index.html`** from the root directory to `/var/www/html/`, where NGINX expects static content to be.
+4. **Add a new [service](https://documentation.ubuntu.com/rockcraft/en/latest/reference/rockcraft.yaml/#services)** to make nginx the rock entrypoint:
+    * The service should run this command: `nginx -g 'daemon off;'`.
+    * The service type should be `replace`
+    * The service should run at `startup`
 
 > **Hint:** Use the `organize` field (see the docs [here](https://documentation.ubuntu.com/rockcraft/en/latest/common/craft-parts/reference/part_properties/#organize)) in your part to map local file paths to their intended locations inside the rock.
 
@@ -29,7 +33,7 @@ Then import and run your rock:
 
 ```bash
 skopeo-copy <your-rock-name>
-docker run --rm -d -p 8080:80 --name hello-nginx "<your-rock-name>:latest" exec nginx -g 'daemon off;'
+docker run --rm -d -p 8080:80 --name hello-nginx "<your-rock-name>:latest"
 ```
 
 Now curl `http://localhost:8080` and confirm that your HTML page is being served by NGINX!

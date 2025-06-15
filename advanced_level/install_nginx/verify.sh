@@ -20,7 +20,7 @@ ROCK_NAME=$(basename "$ROCK_FILE" | sed 's/_latest_amd64\.rock$//')
 /snap/bin/rockcraft.skopeo --insecure-policy copy "oci-archive:${ROCK_FILE}" "docker-daemon:${ROCK_NAME}:latest"
 
 # Run container and check the content
-docker run --rm -d -p 8123:80 --name test-nginx "${ROCK_NAME}:latest" exec nginx -g 'daemon off;'
+docker run --rm -d -p 8123:80 --name test-nginx "${ROCK_NAME}:latest"
 
 # Check rock works
 curl http://localhost:8123 | grep "Hello World! From a Rock!"
