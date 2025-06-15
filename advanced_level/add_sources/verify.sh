@@ -21,3 +21,4 @@ ROCK_NAME=$(basename "$ROCK_FILE" | sed 's/_latest_amd64\.rock$//')
 
 # Run container and check the content
 docker run --rm "${ROCK_NAME}:latest" exec cat /index.html | grep -q "Hello World! From a Rock!"
+docker image rm -f "${ROCK_NAME}:latest"

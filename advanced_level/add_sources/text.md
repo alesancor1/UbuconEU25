@@ -9,7 +9,7 @@ To get your rock set up correctly, you’ll need to:
 1. **Add metadata** that describes your rock, such as its name, version, and a short summary.
 2. **Specify a base**—this tells Rockcraft which base image to build your rock from.
 3. **Define the platform(s)** your rock should support, such as `amd64`.
-4. **Create a part** that includes your `index.html` file (already provided, check with `ls`). You’ll use the [dump plugin](https://documentation.ubuntu.com/rockcraft/en/latest/common/craft-parts/reference/plugins/dump_plugin/) to include local files, and make sure to stage the `index.html` so it's included in the final rock.
+4. **Create a part** that includes your `index.html` file (already provided, check with `ls`). You’ll use the [dump plugin](https://documentation.ubuntu.com/rockcraft/en/latest/common/craft-parts/reference/plugins/dump_plugin/) to include local files, and make sure to [stage](https://documentation.ubuntu.com/rockcraft/en/latest/common/craft-parts/reference/part_properties/#stage) the `index.html` so it's included in the final rock.
 
 
 ### Take Into Account
@@ -40,7 +40,7 @@ skopeo-copy <your-rock-name>
 Run your image with docker and check that the `index.html` file is there:
 
 ```bash
-docker run --rm "<your-rock-name>:latest" exec cat /index.html"
+docker run --rm "<your-rock-name>:<version>" exec cat /index.html"
 ```
 
 Once your rock is packed and working, check the result and jump to the next step!

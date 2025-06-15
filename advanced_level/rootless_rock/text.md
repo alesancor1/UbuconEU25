@@ -57,7 +57,7 @@ Rebuild and test your rock:
 ```bash
 rockcraft pack
 skopeo-copy <your-rock-name>
-docker run -d -p 8080:80 --name hello-nginx "<your-rock-name>:latest"
+docker run --rm -d -p 8080:80 --name hello-nginx "<your-rock-name>:<version>"
 ```
 
 You should be able to run curl and check the file being served by your rock. Then verify that the container is running, and optionally inspect it to confirm it’s running as the non-root user:

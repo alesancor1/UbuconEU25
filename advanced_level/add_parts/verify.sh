@@ -22,8 +22,11 @@ ROCK_NAME=$(basename "$ROCK_FILE" | sed 's/_latest_amd64\.rock$//')
 # Run container and check the content
 docker run --rm -d -p 8123:80 -p 8124:443 --name test-nginx "${ROCK_NAME}:latest"
 
+sleep 2
+
 # Stop the container
 curl http://localhost:8123 | grep "301 Moved Permanently"
-curl -Lk http://localhost:8123 | grep "Hello World! From a Rock!"
+curl -k https://localhost:8124 | grep "Hello World! From a Rock!"
 
 docker stop test-nginx
+docker image rm -f "${ROCK_NAME}:latest"

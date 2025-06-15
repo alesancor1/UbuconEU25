@@ -17,6 +17,7 @@ You’re going to:
 1. **Modify your nginx.conf** to expose the index.html via HTTPs. See the next section.
 2. **Add a new part to build `minica` from source** using the [Go plugin](https://documentation.ubuntu.com/rockcraft/en/latest/common/craft-parts/reference/plugins/go_plugin/).
 3. **Create another part** that runs `minica` to generate a TLS certificate for a domain called `hello-rock`.
+    * Make this part run `after` the previous one.
     * Override the build step to create a new directory at `/var/www/letsencrypt` and generate `minica` certificates inside.
     * Override the prime step to set the ownership of `/var/www/letsencrypt`
 
@@ -59,7 +60,7 @@ Once you’ve updated your `rockcraft.yaml`, build and test with:
 ```bash
 rockcraft pack
 skopeo-copy <your-rock-name>
-docker run --rm -d -p 8080:80 -p 8443:443 --name hello-nginx "<your-rock-name>:latest"
+docker run --rm -d -p 8080:80 -p 8443:443 --name hello-nginx "<your-rock-name>:<version>"
 ```
 
 Once the container is running (you can check with `docker ps`) you can use `curl`:
@@ -81,11 +82,10 @@ that previously for Nginx:
     </html>
 ```
 
-If using `curl`, you can specify the `-L` option to follow the
-redirection:
+If you try now requesting via `HTTPS`:
 
 ```
-curl -Lk http://localhost:8080
+curl -k https://localhost:8443
 ```
 
 > Since the certificates are self-signed and hence, invalid, you will
@@ -93,7 +93,7 @@ get a warning page in your browser. If using curl, it will throw an
 error unless you pass ``-k`` option, which allows access to insecure
 sites.
 
-The output should now be the contents of `index.html`:
+The output should be the contents of `index.html`:
 
 ```
 <!doctype html>
