@@ -2,8 +2,16 @@
     "title": "Challenge",
     "details": {
         "intro": {
-            "text": "intro.md"
+            "text": "intro.md",
+            "foreground": "setup/foreground.sh",
+            "background": "setup/background.sh"
         },
+        "steps": [
+            {
+                "title": "Create your own rock",
+                "text": "challenge.md"
+            }
+        ],
         "finish": {
             "text": "finish.md"
         }
