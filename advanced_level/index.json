@@ -11,6 +11,11 @@
                 "title": "Add sources to a rock",
                 "text": "add_sources/text.md",
                 "verify": "add_sources/verify.sh"
+            },
+            {
+                "title": "Install Nginx to your rock",
+                "text": "install_nginx/text.md",
+                "verify": "install_nginx/verify.sh"
             }
         ],
         "finish": {
