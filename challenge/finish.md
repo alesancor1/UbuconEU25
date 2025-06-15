@@ -11,14 +11,14 @@ You’ve completed the final challenge of building your own rock! By now, you’
 ## 🧑‍💻 What’s Next?
 
 - Keep improving your rock! Experiment with additional parts, slices, or optimize it further.
-- Engage with the Rockcraft community on [Matrix](https://matrix.to/#/#rockcraft:ubuntu.com).
+- Engage with the [Rocks community](https://ubuntu.com/community/governance/teams/rocks).
 - Keep learning about container technologies and start [contributing to rockcraft](https://github.com/canonical/rockcraft/blob/main/CONTRIBUTING.rst).
 
 ---
 
 ## 💡 Feedback and Suggestions
 
-Your feedback helps us make these scenarios better! If you have ideas or ran into issues, please share them with the maintainers on our [Matrix channels](https://matrix.to/#/#rockcraft:ubuntu.com)!
+Your feedback helps us make these scenarios better! If you have ideas or ran into issues, please share them with the maintainers on our [communication channels](https://ubuntu.com/community/governance/teams/rocks#p-104002-communication)!
 
 ---
 
