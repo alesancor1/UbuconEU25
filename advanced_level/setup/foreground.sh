@@ -4,5 +4,6 @@ echo Done!
 
 sleep 2
 
+source ~/.bashrc
 cd advanced_level
 clear

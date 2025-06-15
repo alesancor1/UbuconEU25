@@ -19,8 +19,5 @@ skopeo-copy() {
 }
 EOF
 
-# Source .bashrc immediately (only applies to current script session)
-source ~/.bashrc
-
 # Signal completion
 echo done > /tmp/background0

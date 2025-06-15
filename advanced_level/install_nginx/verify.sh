@@ -1,9 +1,18 @@
 #!/bin/bash
 
-set -ex
+set -e
 
-# cd to the correct path
 cd /root/advanced_level
+
+# Define cleanup logic
+cleanup() {
+    echo "🧹 Cleaning up..."
+    docker stop test-nginx >/dev/null 2>&1 || true
+    docker image rm -f "${ROCK_NAME}:latest" >/dev/null 2>&1 || true
+}
+
+# Ensure cleanup always runs, and preserve correct exit code
+trap cleanup EXIT
 
 # Check that rock has been packed
 ROCK_FILE=$(ls *.rock 2>/dev/null | head -n1)
@@ -19,14 +28,11 @@ ROCK_NAME=$(basename "$ROCK_FILE" | sed 's/_latest_amd64\.rock$//')
 # Import the rock into Docker
 /snap/bin/rockcraft.skopeo --insecure-policy copy "oci-archive:${ROCK_FILE}" "docker-daemon:${ROCK_NAME}:latest"
 
-# Run container and check the content
+# Run the container
 docker run --rm -d -p 8123:80 --name test-nginx "${ROCK_NAME}:latest"
 
+# Give NGINX time to start
 sleep 2
 
-# Check rock works
+# Check the content
 curl http://localhost:8123 | grep "Hello World! From a Rock!"
-
-# Stop the container
-docker stop test-nginx
-docker image rm -f "${ROCK_NAME}:latest"
