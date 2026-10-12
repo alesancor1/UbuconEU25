@@ -13,12 +13,12 @@ Here’s what you need to do:
 1. **Install NGINX** in your rock by adding the `nginx` package.
 2. **Include the `nginx.conf`** file (already provided, check with `ls`) in your rock and ensure it's placed under `/etc/nginx/conf.d/`.
 3. **Move your `index.html`** from the root directory to `/var/www/html/`, where NGINX expects static content to be.
-4. **Add a new [service](https://documentation.ubuntu.com/rockcraft/en/latest/reference/rockcraft.yaml/#services)** to make nginx the rock entrypoint:
+4. **Add a new [service](https://ubuntu.com/containers/rockcraft/docs/latest/reference/rockcraft-yaml/#services)** to make nginx the rock entrypoint:
     * The service should run this command: `nginx -g 'daemon off;'`.
     * The service `override` should be `replace`
     * The service should run at `startup`
 
-> **Hint:** Replace the `stage` field with `organize` field (see the docs [here](https://documentation.ubuntu.com/rockcraft/en/latest/common/craft-parts/reference/part_properties/#organize)) in your part to map local file paths to their intended locations inside the rock.
+> **Hint:** Replace the `stage` field with `organize` field (see the docs [here](https://ubuntu.com/containers/rockcraft/docs/latest/reference/rockcraft-yaml/#organize)) in your part to map local file paths to their intended locations inside the rock.
 
 
 ## ✅ Test Your Rock

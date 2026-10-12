@@ -50,9 +50,9 @@ Remember, this challenge is about pushing yourself and exploring new possibiliti
 
 ## 📝 For Reference
 
-- [Rockcraft docs](https://documentation.ubuntu.com/rockcraft/en/latest/)
-- [Chisel docs](https://documentation.ubuntu.com/chisel/en/latest/)
-- [Pebble docs](https://documentation.ubuntu.com/pebble/)
+- [Rockcraft docs](https://ubuntu.com/containers/rockcraft/docs/latest/)
+- [Chisel docs](https://ubuntu.com/chisel/docs/latest/)
+- [Pebble docs](https://ubuntu.com/docs/pebble/)
 - [Dive tool](https://github.com/wagoodman/dive)
 - [OCI Spec](https://github.com/opencontainers/image-spec/)
 

@@ -15,7 +15,7 @@ Your rock is now rootless and serving static content via NGINX, great progress! 
 You’re going to:
 
 1. **Modify your nginx.conf** to expose the index.html via HTTPs. See the next section.
-2. **Add a new part to build `minica` from source** using the [Go plugin](https://documentation.ubuntu.com/rockcraft/en/latest/common/craft-parts/reference/plugins/go_plugin/).
+2. **Add a new part to build `minica` from source** using the [Go plugin](https://ubuntu.com/containers/rockcraft/docs/latest/common/craft-parts/reference/plugins/go_plugin/).
 3. **Create another part** that runs `minica` to generate a TLS certificate for a domain called `hello-rock`.
     * Make this part run `after` the previous one.
     * Override the build step to create a new directory at `/var/www/letsencrypt` and generate `minica` certificates inside.
