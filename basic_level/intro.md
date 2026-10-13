@@ -1,6 +1,6 @@
 # 🔧 Build a Minimal Hello Rock
 
-Welcome to this hands-on lab! In this scenario, you’ll create and optimize a minimal container image (called a **rock**) using the [Rockcraft](https://documentation.ubuntu.com/rockcraft/en/latest/) build tool. Rocks are OCI-compliant images with built-in system integration—perfect for building lightweight, secure container workloads.
+Welcome to this hands-on lab! In this scenario, you’ll create and optimize a minimal container image (called a **rock**) using the [Rockcraft](https://ubuntu.com/containers/rockcraft/docs/latest/) build tool. Rocks are OCI-compliant images with built-in system integration—perfect for building lightweight, secure container workloads.
 
 ---
 

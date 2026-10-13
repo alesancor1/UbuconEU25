@@ -1,6 +1,6 @@
 # 🎉 You Did It — Rock On!
 
-Congratulations! You've successfully built and optimized your very own **Hello Rock**. By completing this scenario, you’ve taken important steps toward mastering how to build efficient, secure, and production-ready container images using [Rockcraft](https://documentation.ubuntu.com/rockcraft/en/latest/).
+Congratulations! You've successfully built and optimized your very own **Hello Rock**. By completing this scenario, you’ve taken important steps toward mastering how to build efficient, secure, and production-ready container images using [Rockcraft](https://ubuntu.com/containers/rockcraft/docs/latest/).
 
 ---
 
@@ -18,4 +18,4 @@ Each step has made your container image **smaller**, **cleaner**, and more **pro
 
 Want to go further? Head on to Advanced Level!
 
-You can also dive deeper into Rockcraft with the [official documentation](https://documentation.ubuntu.com/rockcraft/en/latest/).
+You can also dive deeper into Rockcraft with the [official documentation](https://ubuntu.com/containers/rockcraft/docs/latest/).

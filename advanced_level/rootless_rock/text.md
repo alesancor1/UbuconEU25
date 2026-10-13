@@ -16,7 +16,7 @@ Rockcraft provides a convenient user named `_daemon_` (UID:GID `584792:584792`) 
 
 To make your NGINX rock rootless, you’ll need to:
 
-1. **Use the [run-user](https://documentation.ubuntu.com/rockcraft/en/latest/reference/rockcraft.yaml/#run-user) field** to set the default user for the container to `_daemon_`.
+1. **Use the [run-user](https://ubuntu.com/containers/rockcraft/docs/latest/reference/rockcraft-yaml/#run-user) field** to set the default user for the container to `_daemon_`.
 2. **Change ownership** of any directories or files that NGINX needs to write to or serve from so that they are owned by the `_daemon_` user. These are:
     * `/run`
     * `/var/lib/nginx` 
@@ -24,9 +24,9 @@ To make your NGINX rock rootless, you’ll need to:
     * `/var/log/nginx`
     * `/etc/nginx`
 3. **Override the `prime` step** in your `rockcraft.yaml` to perform these `chown` operations. 
-    * Use the `override-prime` field for this. See the [docs](https://documentation.ubuntu.com/rockcraft/en/latest/common/craft-parts/reference/part_properties/#override-prime)
+    * Use the `override-prime` field for this. See the [docs](https://ubuntu.com/containers/rockcraft/docs/latest/reference/rockcraft-yaml/#override-prime)
 
-> You can get more context about rockcraft lifecycle (pull, overlay, build, stage, prime) in the [docs](https://documentation.ubuntu.com/rockcraft/en/latest/explanation/lifecycle/).
+> You can get more context about rockcraft lifecycle (pull, overlay, build, stage, prime) in the [docs](https://ubuntu.com/containers/rockcraft/docs/latest/common/craft-parts/explanation/lifecycle/).
 
 ---
 
